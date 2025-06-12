@@ -1,11 +1,13 @@
 import styles from "./page.module.css";
 import Header from "./components/header";
+import Navbar from "./components/navbar";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <header>
+      <header className={styles.header}>
         <Header />
+        <Navbar />
       </header>
       <main className={styles.main}></main>
       <footer className={styles.footer}></footer>
