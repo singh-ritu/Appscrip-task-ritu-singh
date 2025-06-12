@@ -1,0 +1,14 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  align-items: center;
+  padding: 36px 96px 60px 96px;
+  width: 100%;
+}
+
+.centerImage {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
