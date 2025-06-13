@@ -6,7 +6,6 @@
 }
 .topsection{
   display: flex;
-  justify-content: space-between;
 }
 .topright{
   width: 60%;
@@ -52,10 +51,74 @@
   font-size: 20px;
   font-weight: 700;
   padding-bottom: 16px;
-}.transactions{
+}
+.transactions{
   font-family: sans-serif;
   font-weight: 400;
   font-size: 12px;
   padding-top: 16px;
   padding-bottom: 26px;
+}
+
+
+.bottomsection{
+  display: flex;
+  margin-top: 56px;
+}
+.bottomright{
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+}
+.rightfirst{
+  padding-right: 112px;
+}
+.rightfirstheading{
+  font-family: sans-serif;
+  font-size: 24.7px;
+  font-weight: 700;
+  padding-bottom: 18px;
+}
+.rightfirstlinks{
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+.rightsecondheading{
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 24px;
+}
+.rightsecondlinks{
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 16px;
+}
+.bottomleft{
+  width:40%;
+}
+.bottomleftheading{
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 24px;
+}
+.bottomleftlast{
+  font-family: sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  padding-top: 56px;
+  padding-bottom: 16px;
+}
+.bottomtag{
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 37px;
 }
