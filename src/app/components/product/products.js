@@ -1,30 +1,13 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "./products.module.css";
 import Dropdown from "../Dropdown ";
-import products from "../../data.json";
-import Card from "../Card";
+
+import options from "../../../data/filter.json";
+import Drawer from "../drawer";
+import Productgrid from "../productgrid";
 
 function Products() {
-  const [clicked, setClicked] = useState(false);
-  // const [products, setProducts] = useState([]);
-  // const [error, setError] = useState(null);
-  // useEffect(() => {
-  //   const fetchProducts = async () => {
-  //     try {
-  //       const res = await fetch("https://fakestoreapi.com/products");
-  //       if (!res.ok) throw new Error("failed to fetch products");
-  //       const data = await res.json();
-  //       console.log(data);
-  //       setProducts(data);
-  //     } catch (error) {
-  //       setError(error.message);
-  //     }
-  //   };
-  //   fetchProducts();
-  // }, []);
-
-  // if (error) return <p>Error: {error}</p>;
   return (
     <div className={styles.main}>
       <div className={styles.headingBox}>
@@ -38,10 +21,10 @@ function Products() {
 
       <div className={styles.maindescription}>
         <div className={styles.navbar}>
-          <div className={styles.items}>
-            <p>3425 ITEMS</p>
+          <div className={styles.itembox}>
+            <p className={styles.items}>3425 ITEMS</p>
             <div>
-              <Dropdown options={[]} defaultOption="HIDE FILTER" />
+              <Drawer options={options} />
             </div>
           </div>
           <div>
@@ -57,11 +40,8 @@ function Products() {
             />
           </div>
         </div>
-
-        <div className={styles.productgrid}>
-          {products.map((product, _) => (
-            <Card product={product} key={product.id} />
-          ))}
+        <div>
+          <Productgrid />
         </div>
       </div>
     </div>

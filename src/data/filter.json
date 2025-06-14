@@ -1,0 +1,46 @@
+[
+  {
+    "filterName": "IDEAL FOR",
+    "filterItems": [
+      "Men",
+      "Women",
+      "Baby & Kids"
+    ]
+  },
+
+  {
+    "filterName": "OCCASION",
+    "filterItems" : []
+  },
+
+  {
+    "filterName": "WORK",
+    "filterItems" : []
+  },
+
+  {
+    "filterName": "FABRIC",
+    "filterItems" : []
+  },
+
+  {
+    "filterName": "SEGMENT",
+    "filterItems" : []
+  },
+
+  {
+    "filterName": "SUITABLE FOR",
+    "filterItems" : []
+  },
+
+  {
+    "filterName": "RAW MATERIALS",
+    "filterItems" : []
+  },
+
+  {
+    "filterName": "PATTERN",
+    "filterItems" : []
+  }
+
+]

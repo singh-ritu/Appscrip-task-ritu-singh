@@ -22,6 +22,7 @@
 
 .optionsList {
   position: absolute;
+  padding: 16px;
   margin-top: 16px;
   left: 50%;
   transform: translateX(-50%);
@@ -46,9 +47,7 @@
   letter-spacing: 0px;
   text-align: right;
   text-transform: uppercase;
-
 }
-
 .option:hover {
   background-color: #f5f5f5;
 }
@@ -56,3 +55,9 @@
 .selectedOption {
   font-weight: 700;
 }
+.checkbox{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+

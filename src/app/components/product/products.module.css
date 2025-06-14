@@ -36,20 +36,16 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
-.items{
+.itembox{
   display: flex;
   align-items: center;
-  justify-content:center;
   gap: 80px;
+}
+.items{
+  font-family: sans-serif;
+font-weight: 700;
+font-size: 18px;
+line-height: 40px;
+}
 
-}
-.productgrid{
-  width: 100%;
-  display: grid;
-  padding: 32px 96px 32px 96px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
