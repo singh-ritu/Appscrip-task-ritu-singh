@@ -4,6 +4,7 @@ import styles from "./drawer.module.css";
 import arrow from "@/assets/arrow.svg";
 
 function Drawer({ options, isDrawerOpen }) {
+  // if (!isDrawerOpen) return null;
   return (
     <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}>
       <div className={styles.optionsList}>

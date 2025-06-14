@@ -1,14 +1,28 @@
-.drawer {
+/* .drawer {
   width: 250px;
   background: #f4f4f4;
   padding: 16px;
   height: 100vh;
   transition: transform 0.3s ease;
-  position: fixed;
-  left: 0;
-  top: 0;
-  transform: translateX(-100%);
-  z-index: 10;
+} */
+
+.drawer {
+  width: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background-color: #f4f4f4;
+  padding: 0;
+}
+
+
+.drawer.open {
+  width: 250px;
+  padding: 16px;
+}
+
+.drawer.closed {
+  width: 0;
+  padding: 0;
 }
 
 .select {

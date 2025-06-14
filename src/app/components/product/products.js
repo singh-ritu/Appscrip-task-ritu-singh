@@ -6,7 +6,7 @@ import Dropdown from "../dropdown ";
 
 import options from "../../../data/filter.json";
 import Drawer from "../drawer";
-import Productgrid from "../product-list";
+import ProductList from "../product-list";
 import arrow from "@/assets/arrow.svg";
 
 function Products() {
@@ -49,11 +49,9 @@ function Products() {
             />
           </div>
         </div>
-        <div>
-          <Productgrid />
-          <div>
-            <Drawer options={options} isDrawerOpen={isDrawerOpen} />
-          </div>
+        <div style={{ display: "flex", position: "relative" }}>
+          <Drawer options={options} isDrawerOpen={isDrawerOpen} />
+          <ProductList />
         </div>
       </div>
     </div>
