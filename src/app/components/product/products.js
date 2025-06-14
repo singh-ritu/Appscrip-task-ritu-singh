@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./products.module.css";
-import Dropdown from "../dropdown ";
+import Dropdown from "@/app/components/dropdown";
 import options from "../../../data/filter.json";
 import Drawer from "../drawer";
 import ProductList from "../product-list";
