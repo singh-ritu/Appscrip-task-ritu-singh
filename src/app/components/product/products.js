@@ -25,17 +25,23 @@ function Products() {
 
       <div className={styles.maindescription}>
         <div className={styles.navbar}>
-          <div className={styles.itembox}>
-            <p className={styles.items}>3425 ITEMS</p>
+          <div
+            style={{
+              display: "flex",
+              gap: "80px",
+            }}>
+            <div className={styles.itembox}>
+              <p className={styles.items}>3425 ITEMS</p>
+            </div>
+            <div className={styles.btn}>
+              <Image src={arrow} alt="arrow" className={styles.img} />
+              <button
+                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                className={styles.btn}>
+                {isDrawerOpen ? "HIDE FILTER" : "SHOW FILTER"}
+              </button>
+            </div>
           </div>
-          <button
-            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-            className={`${styles.content} ${
-              isDrawerOpen ? styles.shifted : ""
-            }`}>
-            {isDrawerOpen ? "HIDE FILTER" : "SHOW FILTER"}
-            <Image src={arrow} alt="arrow" />
-          </button>
           <div>
             <Dropdown
               options={[
