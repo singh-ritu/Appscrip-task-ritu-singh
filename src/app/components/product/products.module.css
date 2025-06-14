@@ -23,3 +23,24 @@
   line-height: 40px;
   margin: 0 28px;
 }
+.navbar{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 32px;
+}
+.items{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+
+}
+.productgrid{
+  width: 100%;
+  display: grid;
+  padding: 32px 96px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}

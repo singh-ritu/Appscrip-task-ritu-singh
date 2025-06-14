@@ -1,0 +1,17 @@
+.product{
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+}
+.image{
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+
+}
+.details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
