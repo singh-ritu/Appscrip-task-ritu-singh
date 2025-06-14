@@ -5,7 +5,6 @@
   transition: all 0.3s ease;
   background-color: white;
   padding: 0;
-
 }
 
 .drawer.open {
@@ -74,4 +73,15 @@ font-size: 18px;
 }
 .rotate{
   transform: rotate(180deg);
+}
+
+.filterCheckbox {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 900px) {
+  .drawer {
+    display: none;
+  }
 }

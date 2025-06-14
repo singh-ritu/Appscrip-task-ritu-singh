@@ -21,7 +21,6 @@ function Products() {
         const res = await fetch("https://fakestoreapi.com/products");
         if (!res.ok) throw new Error("failed to fetch products");
         const data = await res.json();
-        console.log(data);
         setProducts(data);
       } catch (error) {
         setError(error.message);
@@ -50,11 +49,7 @@ function Products() {
           </div>
         ) : (
           <div className={styles.navbar}>
-            <div
-              style={{
-                display: "flex",
-                gap: "80px",
-              }}>
+            <div className={styles.filterBtnContainer}>
               <div className={styles.itembox}>
                 <p className={styles.items}>3425 ITEMS</p>
               </div>
@@ -85,7 +80,7 @@ function Products() {
             </div>
           </div>
         )}
-        <div style={{ display: "flex", position: "relative" }}>
+        <div className={styles.flex}>
           <Drawer options={options} isDrawerOpen={isDrawerOpen} />
           <ProductList products={products} />
         </div>

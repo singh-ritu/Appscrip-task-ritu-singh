@@ -87,6 +87,14 @@ line-height: 40px;
   height: 40px;
   background-color:  rgba(229, 229, 229, 1)
 }
+
+.flex { display: flex }
+
+.filterBtnContainer {
+  display: flex;
+  gap: 80px;
+}
+
 @media (max-width: 900px) {
   .headingBox {
     width: 100%;

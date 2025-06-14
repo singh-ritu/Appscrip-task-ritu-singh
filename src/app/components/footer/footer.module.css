@@ -4,19 +4,19 @@
   color: white;
   padding: 79px 128px;
 }
-.topsection{
+.topSection{
   display: flex;
 }
-.topright{
+.topRight{
   width: 60%;
 }
-.toprightheading{
+.topRightHeading{
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 700;
   padding-bottom: 24px;
 }
-.toprightsubheading{
+.topRightSubheading{
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -25,16 +25,16 @@
 .Image{
   margin-bottom: 72px;
 }
-.topleft{
+.topLeft{
   width: 40%;
 }
-.topleftheading{
+.topLeftHeading{
   font-family: sans-serif;
   font-size: 20px;
   font-weight: 700;
   padding-bottom: 16px;
 }
-.phonenumber{
+.phoneNumber{
   font-family: sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -122,19 +122,37 @@
   font-weight: 400;
   padding-top: 37px;
 }
+
+.contactDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link{
+  display: flex;
+  padding: 24px 0;
+ }
+.paymentImg{
+  padding-top: 24px;
+}
+
+.currencyContainer {
+  padding: 24px 0;
+}
+
 @media (max-width : 900px) {
   .parentFooter{
     padding: 24px 16px;
   }
-  .topright{
+  .topRight{
     width: 100%;
   }
-  .toprightheading{
+  .topRightHeading{
     font-weight: 700;
     font-size: 16px;
     padding-top: 8px;
    }
-   .toprightsubheading{
+   .topRightSubheading{
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -144,10 +162,10 @@
    .Image{
     margin-bottom: 24px;
    }
-   .topleft{
+   .topLeft{
     width: 100%;
    }
-   .topsection{
+   .topSection{
     display: block;
    }
    .bottomsection{
@@ -179,11 +197,4 @@
     letter-spacing: 0px;
     text-align: center;
    }
-}
-.link{
-  display: flex;
-  padding: 24px 0;
- }
-.paymentImg{
-  padding-top: 24px;
 }

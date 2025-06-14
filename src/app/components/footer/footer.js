@@ -13,12 +13,12 @@ function Footer() {
   const isMobile = useDevice();
   return (
     <div className={styles.parentFooter}>
-      <div className={styles.topsection}>
+      <div className={styles.topSection}>
         {isMobile ? (
           <div>
-            <div className={styles.topright}>
-              <p className={styles.toprightheading}>BE THE FIRST TO KNOW</p>
-              <p className={styles.toprightsubheading}>
+            <div className={styles.topRight}>
+              <p className={styles.topRightHeading}>BE THE FIRST TO KNOW</p>
+              <p className={styles.topRightSubheading}>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. this is simply dummy text.
               </p>
@@ -32,9 +32,9 @@ function Footer() {
             </div>
           </div>
         ) : (
-          <div className={styles.topright}>
-            <p className={styles.toprightheading}>BE THE FIRST TO KNOW</p>
-            <p className={styles.toprightsubheading}>
+          <div className={styles.topRight}>
+            <p className={styles.topRightheading}>BE THE FIRST TO KNOW</p>
+            <p className={styles.topRightsubheading}>
               Sign up for updates from mettā muse.
             </p>
             <Image
@@ -47,17 +47,17 @@ function Footer() {
           </div>
         )}
         {isMobile ? (
-          <div className={styles.topleft}>
-            <p className={styles.topleftheading}>CONTACT US</p>
-            <p style={{ display: "flex", justifyContent: "space-between" }}>
-              <p className={styles.phonenumber}>+44 221 133 5360</p>
+          <div className={styles.topLeft}>
+            <p className={styles.topLeftHeading}>CONTACT US</p>
+            <div className={styles.contactDetails}>
+              <p className={styles.phoneNumber}>+44 221 133 5360</p>
               <p className={styles.mail}>customercare@mettamuse.com</p>
-            </p>
+            </div>
             <hr />
-            <p style={{ padding: "24px 0" }}>
+            <div className={styles.currencyContainer}>
               <p className={styles.currency}>Currency</p>
               <Image src={language} alt="language" width={62} height={24} />
-            </p>
+            </div>
             <hr />
           </div>
         ) : (

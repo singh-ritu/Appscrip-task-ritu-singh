@@ -11,7 +11,6 @@ function Drawer({ options, isDrawerOpen }) {
       ...prev,
       [index]: !prev[index],
     }));
-    console.log("clicked");
   };
   return (
     <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}>
@@ -34,14 +33,7 @@ function Drawer({ options, isDrawerOpen }) {
               <div className={styles.accordionContent}>
                 {option.filterItems.map((item, i) => (
                   <p key={i} className={styles.filterItem}>
-                    <input
-                      type="checkbox"
-                      style={{
-                        accentColor: "white",
-                        width: "18px",
-                        height: "18px",
-                      }}
-                    />
+                    <input type="checkbox" className={styles.filterCheckbox} />
                     {item}
                   </p>
                 ))}
