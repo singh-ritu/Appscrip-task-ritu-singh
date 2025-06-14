@@ -1,10 +1,10 @@
 import Image from "next/image";
-import styles from "./card.module.css";
+import styles from "./product-card.module.css";
 import React, { useState } from "react";
 import heartFull from "@/assets/heart.svg";
 import heart from "@/assets/heart1.svg";
 
-function Card({ product }) {
+function ProductCard({ product }) {
   const [clicked, setClicked] = useState(false);
   return (
     <div key={product.id} className={styles.product}>
@@ -34,4 +34,4 @@ function Card({ product }) {
   );
 }
 
-export { Card };
+export { ProductCard };

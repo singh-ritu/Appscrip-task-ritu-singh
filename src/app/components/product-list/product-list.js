@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./product-list.module.css";
-import Card from "../card";
+import ProductCard from "../product-card";
 
 function ProductList({ products }) {
   return (
     <div className={styles.productList}>
       {products.map((product, _) => (
-        <Card product={product} key={product.id} />
+        <ProductCard product={product} key={product.id} />
       ))}
     </div>
   );
