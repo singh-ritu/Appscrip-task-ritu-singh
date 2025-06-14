@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "./product-grid.module.css";
+import styles from "./product-list.module.css";
 import Card from "../card";
-import products from "../../data.json";
 
-function Productgrid() {
+function Productgrid({ products }) {
   return (
     <div className={styles.productgrid}>
       {products.map((product, _) => (

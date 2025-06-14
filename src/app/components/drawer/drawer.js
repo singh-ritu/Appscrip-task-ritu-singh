@@ -17,11 +17,12 @@ function Drawer({ options, isDrawerOpen }) {
     <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}>
       <div className={styles.optionsList}>
         {options?.map((option, index) => (
-          <div key={index} className={styles.objectOptions}>
+          <div
+            key={index}
+            className={styles.objectOptions}
+            onClick={() => toggleAccordion(index)}>
             {option.filterName}
-            <div
-              className={styles.filterdetails}
-              onClick={() => toggleAccordion(index)}>
+            <div className={styles.filterdetails}>
               <p className={styles.all}>All</p>
               <Image
                 src={arrow}

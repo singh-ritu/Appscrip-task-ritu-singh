@@ -21,16 +21,13 @@ function Card({ product }) {
         <p className={styles.title}>{product.title}</p>
         <div className={styles.subdetails}>
           <p className={styles.category}>{product.category}</p>
-
-          <div>
-            <Image
-              src={clicked ? heartFull : heart}
-              alt="heart"
-              width={24}
-              height={24}
-              onClick={() => setClicked(!clicked)}
-            />
-          </div>
+          <Image
+            src={clicked ? heartFull : heart}
+            alt="heart"
+            width={24}
+            height={24}
+            onClick={() => setClicked(!clicked)}
+          />
         </div>
       </div>
     </div>

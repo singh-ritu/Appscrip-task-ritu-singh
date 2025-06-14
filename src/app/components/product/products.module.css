@@ -50,7 +50,7 @@ line-height: 40px;
 }
 
 .btn{
-
+  cursor: pointer;
   background-color: white;
   color:  rgba(136, 135, 146, 1);
   display: flex;
