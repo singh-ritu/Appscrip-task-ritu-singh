@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./product-list.module.css";
-import Card from "@/app/components/card";
+import Card from "../card";
 
 function Productgrid({ products }) {
   return (
