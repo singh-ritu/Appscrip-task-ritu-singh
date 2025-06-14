@@ -8,11 +8,13 @@ import options from "../../../data/filter.json";
 import Drawer from "../drawer";
 import ProductList from "../product-list";
 import arrow from "@/assets/arrow.svg";
+import useDevice from "@/app/hooks/useDevice";
 
 function Products() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
+  const isNav = useDevice();
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -40,37 +42,45 @@ function Products() {
       </div>
 
       <div className={styles.maindescription}>
-        <div className={styles.navbar}>
-          <div
-            style={{
-              display: "flex",
-              gap: "80px",
-            }}>
-            <div className={styles.itembox}>
-              <p className={styles.items}>3425 ITEMS</p>
+        {isNav ? (
+          <div className={styles.mobilenavbar}>
+            <p className={styles.navbartext}>FILTER</p>
+            <div className={styles.divider} />
+            <p className={styles.navbartext}>RECOMMENDED</p>
+          </div>
+        ) : (
+          <div className={styles.navbar}>
+            <div
+              style={{
+                display: "flex",
+                gap: "80px",
+              }}>
+              <div className={styles.itembox}>
+                <p className={styles.items}>3425 ITEMS</p>
+              </div>
+              <div className={styles.btn}>
+                <Image src={arrow} alt="arrow" className={styles.img} />
+                <button
+                  onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+                  className={styles.btn}>
+                  {isDrawerOpen ? "HIDE FILTER" : "SHOW FILTER"}
+                </button>
+              </div>
             </div>
-            <div className={styles.btn}>
-              <Image src={arrow} alt="arrow" className={styles.img} />
-              <button
-                onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-                className={styles.btn}>
-                {isDrawerOpen ? "HIDE FILTER" : "SHOW FILTER"}
-              </button>
+            <div>
+              <Dropdown
+                options={[
+                  "RECOMMENDED",
+                  "NEWEST FIRST",
+                  "POPULAR",
+                  "PRICE: HIGH TO LOW",
+                  "PRICE: LOW TO HIGH",
+                ]}
+                defaultOption="RECOMMENDED"
+              />
             </div>
           </div>
-          <div>
-            <Dropdown
-              options={[
-                "RECOMMENDED",
-                "NEWEST FIRST",
-                "POPULAR",
-                "PRICE: HIGH TO LOW",
-                "PRICE: LOW TO HIGH",
-              ]}
-              defaultOption="RECOMMENDED"
-            />
-          </div>
-        </div>
+        )}
         <div style={{ display: "flex", position: "relative" }}>
           <Drawer options={options} isDrawerOpen={isDrawerOpen} />
           <ProductList products={products} />

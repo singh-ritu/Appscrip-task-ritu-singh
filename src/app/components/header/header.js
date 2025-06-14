@@ -1,7 +1,5 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-
 import logo from "@/assets/Logo.svg";
 import logoText from "@/assets/logoText.svg";
 import icons from "@/assets/Icons.svg";

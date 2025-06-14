@@ -62,7 +62,31 @@ line-height: 40px;
 .img{
   transform: rotate(90deg);
 }
-
+.mobilenavbar{
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgba(229, 229, 229, 1);
+  border-bottom: 1px solid rgba(229, 229, 229, 1);
+  padding: 16px 0;
+}
+.navbartext{
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+}
+.navbartext:last-child {
+  width: 50%;
+  text-align: center;
+}
+.navbartext:first-child {
+  width: 50%;
+  text-align: center;
+}
+.divider{
+  width: 1px;
+  height: 40px;
+  background-color:  rgba(229, 229, 229, 1)
+}
 @media (max-width: 900px) {
   .headingBox {
     width: 100%;
@@ -78,9 +102,9 @@ line-height: 40px;
     line-height: 22px;
   }
 
-  .navbar {
+  /* .navbar {
     display: none;
-  }
+  } */
 
   .maindescription {
     padding: 0;
