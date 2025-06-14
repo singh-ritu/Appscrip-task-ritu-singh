@@ -1,33 +1,17 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "./products.module.css";
 import Dropdown from "../dropdown ";
-
 import options from "../../../data/filter.json";
 import Drawer from "../drawer";
 import ProductList from "../product-list";
 import arrow from "@/assets/arrow.svg";
 import useDevice from "@/app/hooks/useDevice";
 
-function Products() {
+function Products({ initialProducts }) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [products, setProducts] = useState([]);
-  const [error, setError] = useState(null);
   const isNav = useDevice();
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch("https://fakestoreapi.com/products");
-        if (!res.ok) throw new Error("failed to fetch products");
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        setError(error.message);
-      }
-    };
-    fetchProducts();
-  }, []);
 
   return (
     <div className={styles.main}>
@@ -82,7 +66,7 @@ function Products() {
         )}
         <div className={styles.flex}>
           <Drawer options={options} isDrawerOpen={isDrawerOpen} />
-          <ProductList products={products} />
+          <ProductList products={initialProducts} />
         </div>
       </div>
     </div>

@@ -1,2 +1,2 @@
-import { Products } from "./products";
-export default Products;
+import ProductsContainer from "./products-container";
+export default ProductsContainer;
