@@ -5,27 +5,19 @@ import arrow from "@/assets/arrow.svg";
 
 function Drawer({ options, isDrawerOpen }) {
   return (
-    <>
-      {/* <button
-        onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-        className={`${styles.content} ${isDrawerOpen ? styles.shifted : ""}`}>
-        {isDrawerOpen ? "HIDE FILTER" : "SHOW FILTER"}
-        <Image src={arrow} alt="arrow" />
-      </button> */}
-      <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}>
-        <div className={styles.optionsList}>
-          {options?.map((option, index) => (
-            <div key={index} className={styles.objectOptions}>
-              {option.filterName}
-              <div className={styles.filterdetails}>
-                <p className={styles.all}>All</p>
-                <Image src={arrow} alt="droparrow" />
-              </div>
+    <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}>
+      <div className={styles.optionsList}>
+        {options?.map((option, index) => (
+          <div key={index} className={styles.objectOptions}>
+            {option.filterName}
+            <div className={styles.filterdetails}>
+              <p className={styles.all}>All</p>
+              <Image src={arrow} alt="droparrow" />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 }
 
