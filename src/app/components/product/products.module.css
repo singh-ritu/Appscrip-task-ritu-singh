@@ -60,7 +60,7 @@ line-height: 40px;
   text-decoration: underline;
 }
 .img{
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 .mobilenavbar{
   display: flex;

@@ -59,7 +59,11 @@ function Products() {
                 <p className={styles.items}>3425 ITEMS</p>
               </div>
               <div className={styles.btn}>
-                <Image src={arrow} alt="arrow" className={styles.img} />
+                <Image
+                  src={arrow}
+                  alt="arrow"
+                  className={` ${isDrawerOpen ? styles.img : ""}`}
+                />
                 <button
                   onClick={() => setIsDrawerOpen(!isDrawerOpen)}
                   className={styles.btn}>

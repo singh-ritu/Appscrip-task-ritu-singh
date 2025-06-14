@@ -137,10 +137,13 @@ function Footer() {
         )}
       </div>
       {isMobile ? (
-        <Image src={frame2} alt="frame2" width={376} height={35} />
+        <div className={styles.paymentImg}>
+          <Image src={frame2} alt="frame2" width={376} height={35} />
+        </div>
       ) : (
         ""
       )}
+
       <p className={styles.bottomtag}>
         Copyright © 2023 mettamuse. All rights reserved.
       </p>
