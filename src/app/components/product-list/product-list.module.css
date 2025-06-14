@@ -1,4 +1,4 @@
-.productgrid{
+.productList{
   width: 100%;
   display: grid;
   padding: 32px 96px;
@@ -8,7 +8,7 @@
 }
 
 @media (max-width: 900px) {
-  .productgrid {
+  .productList {
     padding: 0;
     grid-template-columns: 1fr 1fr;
   }

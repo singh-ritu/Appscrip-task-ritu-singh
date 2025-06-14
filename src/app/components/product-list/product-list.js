@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./product-list.module.css";
 import Card from "../card";
 
-function Productgrid({ products }) {
+function ProductList({ products }) {
   return (
-    <div className={styles.productgrid}>
+    <div className={styles.productList}>
       {products.map((product, _) => (
         <Card product={product} key={product.id} />
       ))}
@@ -12,4 +12,4 @@ function Productgrid({ products }) {
   );
 }
 
-export { Productgrid };
+export { ProductList };

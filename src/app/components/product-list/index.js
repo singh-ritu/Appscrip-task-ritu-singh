@@ -1,2 +1,2 @@
-import { Productgrid } from "./product-list";
-export default Productgrid;
+import { ProductList } from "./product-list";
+export default ProductList;
