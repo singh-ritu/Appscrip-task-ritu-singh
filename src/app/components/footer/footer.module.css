@@ -158,5 +158,22 @@
     display: block;
     place-items: start;
    }
-
+   .rightfirst{
+    width: 100%;
+    padding-right: 0;
+   }
+   .rightfirstheading {
+    width: 100%;
+   }
+   .rightsecondheading{
+    width: 100%;
+    padding-right: 0;
+   }
+   .bottomleftheading {
+    width: 100%;
+   }
 }
+.link{
+  display: flex;
+  padding: 24px 0;
+ }

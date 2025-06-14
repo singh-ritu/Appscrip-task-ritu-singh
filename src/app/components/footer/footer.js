@@ -7,13 +7,14 @@ import language from "@/assets/Language.svg";
 import frame from "@/assets/Frame.svg";
 import frame2 from "@/assets/Frame2.svg";
 import useDevice from "@/app/hooks/useDevice";
+import arrow from "@/assets/whiteArrow.svg";
 
 function Footer() {
-  const isfooter = useDevice();
+  const isMobile = useDevice();
   return (
     <div className={styles.parentFooter}>
       <div className={styles.topsection}>
-        {isfooter ? (
+        {isMobile ? (
           <div>
             <div className={styles.topright}>
               <p className={styles.toprightheading}>BE THE FIRST TO KNOW</p>
@@ -45,7 +46,7 @@ function Footer() {
             />
           </div>
         )}
-        {isfooter ? (
+        {isMobile ? (
           <div className={styles.topleft}>
             <p className={styles.topleftheading}>CONTACT US</p>
             <p style={{ display: "flex", justifyContent: "space-between" }}>
@@ -77,9 +78,12 @@ function Footer() {
       <hr />
       <div className={styles.bottomsection}>
         <div className={styles.bottomright}>
-          {isfooter ? (
+          {isMobile ? (
             <div className={styles.rightfirst}>
-              <p className={styles.rightfirstheading}>mettā muse</p>
+              <div className={styles.link}>
+                <p className={styles.rightfirstheading}>mettā muse</p>
+                <Image src={arrow} alt="dropdown" />
+              </div>
               <hr />
             </div>
           ) : (
@@ -93,9 +97,12 @@ function Footer() {
               <p className={styles.rightfirstlinks}>EU Complainces DU</p>
             </div>
           )}
-          {isfooter ? (
-            <div>
-              <p className={styles.rightsecondheading}>QUICK LINKS</p>
+          {isMobile ? (
+            <div className={styles.rightfirst}>
+              <div className={styles.link}>
+                <p className={styles.rightsecondheading}>QUICK LINKS</p>
+                <Image src={arrow} alt="dropdown" />
+              </div>
               <hr />
             </div>
           ) : (
@@ -112,9 +119,13 @@ function Footer() {
           )}
         </div>
 
-        {isfooter ? (
-          <div className={styles.bottomleft}>
-            <p className={styles.bottomleftheading}> FOLLOW US</p>
+        {isMobile ? (
+          <div className={styles.rightfirst}>
+            <div className={styles.link}>
+              <p className={styles.bottomleftheading}> FOLLOW US</p>
+              <Image src={arrow} alt="dropdown" />
+            </div>
+            <hr />
           </div>
         ) : (
           <div className={styles.bottomleft}>
@@ -125,6 +136,11 @@ function Footer() {
           </div>
         )}
       </div>
+      {isMobile ? (
+        <Image src={frame2} alt="frame2" width={376} height={35} />
+      ) : (
+        ""
+      )}
       <p className={styles.bottomtag}>
         Copyright © 2023 mettamuse. All rights reserved.
       </p>

@@ -1,9 +1,11 @@
 .header{
   border-bottom: 1px solid rgba(229, 229, 229, 1);
+  padding: 16px;
 }
 .main {
   display: flex;
   flex-direction: column;
+  padding: 16px;
   gap: 32px;
   grid-row-start: 2;
 }
@@ -101,9 +103,9 @@ a.secondary {
 }
 
 @media (max-width: 600px) {
-  .page {
+  /* .page {
     padding: 16px;
-  }
+  } */
 
   .main {
     align-items: center;
