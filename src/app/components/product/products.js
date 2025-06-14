@@ -35,26 +35,34 @@ function Products() {
           dolor.
         </p>
       </div>
-      <div className={styles.navbar}>
-        <div className={styles.items}>
-          <p>3425 ITEMS</p>
-          <Dropdown options={[]} defaultOption="HIDE FILTER" />
+
+      <div className={styles.maindescription}>
+        <div className={styles.navbar}>
+          <div className={styles.items}>
+            <p>3425 ITEMS</p>
+            <div>
+              <Dropdown options={[]} defaultOption="HIDE FILTER" />
+            </div>
+          </div>
+          <div>
+            <Dropdown
+              options={[
+                "RECOMMENDED",
+                "NEWEST FIRST",
+                "POPULAR",
+                "PRICE: HIGH TO LOW",
+                "PRICE: LOW TO HIGH",
+              ]}
+              defaultOption="RECOMMENDED"
+            />
+          </div>
         </div>
-        <Dropdown
-          options={[
-            "RECOMMENDED",
-            "NEWEST FIRST",
-            "POPULAR",
-            "PRICE: HIGH TO LOW",
-            "PRICE: LOW TO HIGH",
-          ]}
-          defaultOption="RECOMMENDED"
-        />
-      </div>
-      <div className={styles.productgrid}>
-        {products.map((product, _) => (
-          <Card product={product} key={product.id} />
-        ))}
+
+        <div className={styles.productgrid}>
+          {products.map((product, _) => (
+            <Card product={product} key={product.id} />
+          ))}
+        </div>
       </div>
     </div>
   );
