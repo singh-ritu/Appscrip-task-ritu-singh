@@ -1,20 +1,20 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./drawer.module.css";
 import arrow from "@/assets/arrow.svg";
 
-function Drawer({ options }) {
-  const [isShown, setIsShown] = useState(false);
-
+function Drawer({ options, isDrawerOpen }) {
   return (
-    <div className={styles.drawerContainer}>
-      <button onClick={() => setIsShown(!isShown)} className={styles.select}>
-        {isShown ? "HIDE FILTER" : "SHOW FILTER"}
+    <>
+      {/* <button
+        onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+        className={`${styles.content} ${isDrawerOpen ? styles.shifted : ""}`}>
+        {isDrawerOpen ? "HIDE FILTER" : "SHOW FILTER"}
         <Image src={arrow} alt="arrow" />
-      </button>
-      {isShown && (
+      </button> */}
+      <div className={`${styles.drawer} ${isDrawerOpen ? styles.open : ""}`}>
         <div className={styles.optionsList}>
-          {options.map((option, index) => (
+          {options?.map((option, index) => (
             <div key={index} className={styles.objectOptions}>
               {option.filterName}
               <div className={styles.filterdetails}>
@@ -24,8 +24,8 @@ function Drawer({ options }) {
             </div>
           ))}
         </div>
-      )}
-    </div>
+      </div>
+    </>
   );
 }
 

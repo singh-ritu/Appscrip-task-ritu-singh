@@ -1,7 +1,14 @@
-.drawerContainer {
-  position: relative;
-  display: flex;
-  align-items: flex-start;
+.drawer {
+  width: 250px;
+  background: #f4f4f4;
+  padding: 16px;
+  height: 100vh;
+  transition: transform 0.3s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  z-index: 10;
 }
 
 .select {
@@ -39,4 +46,16 @@
   font-family: sans-serif;
 font-weight: 400;
 font-size: 18px;
+}
+
+.content {
+  flex: 1;
+  transition: margin-left 0.3s ease;
+}
+
+.shifted {
+  margin-left: 250px; /* same width as drawer */
+}
+.drawer.open {
+  transform: translateX(0);
 }

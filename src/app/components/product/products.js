@@ -1,13 +1,17 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import styles from "./products.module.css";
-import Dropdown from "../Dropdown ";
+import Dropdown from "../dropdown ";
 
 import options from "../../../data/filter.json";
 import Drawer from "../drawer";
-import Productgrid from "../productgrid";
+import Productgrid from "../product-list";
+import arrow from "@/assets/arrow.svg";
 
 function Products() {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
     <div className={styles.main}>
       <div className={styles.headingBox}>
@@ -23,10 +27,15 @@ function Products() {
         <div className={styles.navbar}>
           <div className={styles.itembox}>
             <p className={styles.items}>3425 ITEMS</p>
-            <div>
-              <Drawer options={options} />
-            </div>
           </div>
+          <button
+            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+            className={`${styles.content} ${
+              isDrawerOpen ? styles.shifted : ""
+            }`}>
+            {isDrawerOpen ? "HIDE FILTER" : "SHOW FILTER"}
+            <Image src={arrow} alt="arrow" />
+          </button>
           <div>
             <Dropdown
               options={[
@@ -42,6 +51,9 @@ function Products() {
         </div>
         <div>
           <Productgrid />
+          <div>
+            <Drawer options={options} isDrawerOpen={isDrawerOpen} />
+          </div>
         </div>
       </div>
     </div>
