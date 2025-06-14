@@ -12,7 +12,7 @@ function Card({ product }) {
         <Image
           src={product.image}
           alt="image"
-          className={styles.image}
+          className={styles.productImage}
           width={300}
           height={400}
         />

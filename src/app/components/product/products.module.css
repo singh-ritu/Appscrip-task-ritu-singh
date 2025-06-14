@@ -62,3 +62,27 @@ line-height: 40px;
 .img{
   transform: rotate(90deg);
 }
+
+@media (max-width: 900px) {
+  .headingBox {
+    width: 100%;
+  }
+  .heading {
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .subheading {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .navbar {
+    display: none;
+  }
+
+  .maindescription {
+    padding: 0;
+  }
+}

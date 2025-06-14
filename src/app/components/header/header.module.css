@@ -12,3 +12,13 @@
   left: 50%;
   transform: translateX(-50%);
 }
+
+@media (max-width: 900px) {
+  .header {
+    padding: 16px;
+  }
+  .icons {
+    width: fit-content;
+    src: local("assets/mobile-icons.svg");
+  }
+}

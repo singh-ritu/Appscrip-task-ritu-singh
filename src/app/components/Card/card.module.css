@@ -4,7 +4,7 @@
   border-radius: 10px;
   padding: 16px;
 }
-.image{
+.productImage{
   background-color: rgba(255, 255, 255, 0.5);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease;
@@ -40,4 +40,24 @@
 
 .subdetails > img {
   cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .product {
+    padding: 0;
+    width: fit-content;
+  }
+
+  .productImage {
+    height: 224px;
+    width: 168px;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0px;
+  }
+  .details {
+    width: 128px;
+  }
 }
